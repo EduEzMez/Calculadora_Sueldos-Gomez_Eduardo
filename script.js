@@ -1,19 +1,19 @@
-let miFormulario = document.getElementById('formulario');
-miFormulario.addEventListener("submit", validacionFormulario);
+let simulador = document.getElementById('formulario');
 
-let resultado = document.getElementById('resultado')
+simulador.addEventListener('submit', miFormulario);
 
-function validacionFormulario(evento){
+function miFormulario(evento){
     evento.preventDefault();
-    let formulario = evento.target
-let datoA = formulario.children[1].value;
-let datoB = formulario.children[3].value;
-let datoC = formulario.children[5].value;
-let datoD = formulario.children[7].value;
+    let formulario = evento.target;
 
-let mostar = Number(Math.trunc((datoA * datoB) + (datoA / datoB * datoC) - datoD));
-resultado.innerText = 'Sueldo a cobrar es de: $' + mostar + ' .-';
+    let datoA = Number(formulario.children[1].value);
+    let datoB = Number(formulario.children[3].value);
+    let datoC = Number(formulario.children[5].value);
+    let datoD = Number(formulario.children[7].value);
+    let datoH = Number(formulario.children[9].value);
+
+    let operacion = Math.trunc((datoA * datoB) + (datoA / datoB * datoC) + datoD - datoH);
+    let resultado = document.getElementById('resultado');
+    resultado.innerText = 'El sueldo a cobrar es de: $' + operacion + '.-'
 
 }
-
-

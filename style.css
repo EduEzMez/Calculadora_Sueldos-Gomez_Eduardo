@@ -27,7 +27,7 @@ h1 span{
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 15dvh;
+    height: 10dvh;
 }
 
 .contenedor_formulario{
@@ -36,7 +36,7 @@ h1 span{
     align-items: center;
     flex-direction: column;
     width: 100%;
-    height: 75dvh;
+    height: 80dvh;
 }
 
 .contenedor_formulario form{

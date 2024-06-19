@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculadora de Sueldo</title>
+</head>
+<body>
+    <main>
+        <section class="contenedor_titulo">
+            <h1>CALCULADORA <span>DE SUELDO</span></h1>
+        </section>
+        <section class="contenedor_formulario">
+            <form action="">
+                <label for="categoria">Categoria</label>
+                <input class="inp" type="text" name="categoria" id="categoria" placeholder="Valor hora en categoria" required>
+                <label for="horas_trabajadas">Horas Trabajadas</label>
+                <input class="inp" type="text" name="horas_trabajadas" id="horas_trabajadas" placeholder="Horas trabajadas" required>
+                <label for="antiguedad">Antiguedad</label>
+                <input class="inp" type="text" name="antiguedad" id="antiguedad" placeholder="Antiguedad" required>
+                <label for="aportes">Aportes</label>
+                <input class="inp" type="text" name="aportes" id="aportes" placeholder="Porcentaje de aportes" required>
+                <input id="btn" type="submit">
+                <textarea class="resultado" name="resultado" id="resultado"></textarea>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <h2>Creado por Eduardo Ezequiel Gomez</h2>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

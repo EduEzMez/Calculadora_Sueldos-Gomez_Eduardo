@@ -12,7 +12,7 @@
             <h1>CALCULADORA <span>DE SUELDO</span></h1>
         </section>
         <section class="contenedor_formulario">
-            <form action="">
+            <form id="formulario">
                 <label for="categoria">Categoria</label>
                 <input class="inp" type="text" name="categoria" id="categoria" placeholder="Valor hora en categoria" required>
                 <label for="horas_trabajadas">Horas Trabajadas</label>
@@ -21,8 +21,9 @@
                 <input class="inp" type="text" name="antiguedad" id="antiguedad" placeholder="Antiguedad" required>
                 <label for="aportes">Aportes</label>
                 <input class="inp" type="text" name="aportes" id="aportes" placeholder="Porcentaje de aportes" required>
-                <input id="btn" type="submit">
-                <textarea class="resultado" name="resultado" id="resultado"></textarea>
+                <input id="btn" type="submit" value="Calcular">
+                <label for="resultado"></label>
+                <textarea label class="resultado" name="resultado" id="resultado"></textarea>
             </form>
         </section>
     </main>

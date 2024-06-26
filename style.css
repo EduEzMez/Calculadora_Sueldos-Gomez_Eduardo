@@ -12,7 +12,7 @@ p, label, input{
     color: #73C6B6;
 }
 h1{
-    font-size: 23px;
+    font-size: auto;
     color: #A3E4D7;
     font-family: Arial, Helvetica, sans-serif;
     text-shadow: 1px 1px 1px #0E6251;
@@ -50,6 +50,7 @@ h1 span{
 .contenedor_formulario h2{
     margin-bottom: 20px;
     background-color: #F2F3F4;
+    text-align: center;
     
 }
 

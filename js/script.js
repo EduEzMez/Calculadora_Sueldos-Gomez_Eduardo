@@ -7,7 +7,7 @@ let tituloSaludo = document.getElementById('saludo');
 if (tomarDato == null){
     tituloSaludo.innerText= 'Hola, bienvenido al simulador de sueldos. Complete los campos'
 } else{
-    tituloSaludo.innerText= 'Hola '+ tomarDato + ", bienvenido al simulador de sueldos. Complete los campos"
+    tituloSaludo.innerText= 'Hola '+ tomarDato + ", bienvenido al simulador de sueldos."
 }
 
 
@@ -27,8 +27,6 @@ function miFormulario(evento){
     resultado.innerText = 'El sueldo a cobrar es de: $' + operacion + '.-'
     let nombre = document.getElementById('nombre').value;
     localStorage.setItem('nombre', nombre)
-    //resultado.innerHTML = localStorage.getItem('nombre',nombre)
-    let dameResultado = localStorage.getItem('nombre',nombre)
-    //let tituloSaludo = document.getElementById('saludo');
-    tituloSaludo.innerText= 'Hola '+ dameResultado + ", bienvenido al simulador de sueldos. Complete los campos"
+    let tomarDato = localStorage.getItem('nombre',nombre)
+    tituloSaludo.innerText= 'Hola '+ tomarDato + ", bienvenido al simulador de sueldos."
 }

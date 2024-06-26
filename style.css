@@ -40,8 +40,9 @@ h2{
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 10dvh;
+    height: auto;
     background-color: #F2F3F4;
+    padding: 10px;
 }
 
 .contenedor_formulario{
@@ -50,7 +51,7 @@ h2{
     align-items: center;
     flex-direction: column;
     width: 100%;
-    height: 100dvh;
+    height: auto;
     padding: 20px;
     background-color: #F2F3F4;
 }
@@ -106,7 +107,8 @@ footer{
     align-items: center;
     background-color: #A3E4D7;
     width: 100%;
-    height: 35px;
+    height: auto;
+    padding: 10px;
     text-align: center;
 }
 

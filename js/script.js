@@ -16,6 +16,7 @@ function miFormulario(evento){
     evento.preventDefault();
     let formulario = evento.target;
 
+    let dato0 = (formulario.children[1].value);
     let datoA = Number(formulario.children[3].value);
     let datoB = Number(formulario.children[5].value);
     let datoC = Number(formulario.children[7].value);
@@ -29,4 +30,12 @@ function miFormulario(evento){
     localStorage.setItem('nombre', nombre)
     let tomarDato = localStorage.getItem('nombre',nombre)
     tituloSaludo.innerText= 'Hola '+ tomarDato + ", bienvenido al simulador de sueldos."
+
+    let listDatos = {dato0,datoA,datoB,datoC,datoD,datoH}
+    let objetoJson = JSON.stringify(listDatos)
+    console.log(objetoJson)
+
+
+
+    
 }

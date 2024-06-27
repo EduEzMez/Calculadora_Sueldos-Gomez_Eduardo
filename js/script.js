@@ -1,3 +1,4 @@
+
 let simulador = document.getElementById('formulario');
 
 let tomarDato = localStorage.getItem('nombre',nombre)
@@ -9,7 +10,6 @@ if (tomarDato == null){
 } else{
     tituloSaludo.innerText= 'Hola '+ tomarDato + ", bienvenido al simulador de sueldos."
 }
-
 
 simulador.addEventListener('submit', miFormulario);
 function miFormulario(evento){
@@ -26,16 +26,27 @@ function miFormulario(evento){
     let operacion = Math.trunc((categoria * horas) + (categoria / horas * antiguedad) + adicionales - aportes);
     let resultado = document.getElementById('resultado');
     resultado.innerText = 'El sueldo a cobrar es de: $' + operacion + '.-'
+    
+    
     nombre = document.getElementById('nombre').value;
     localStorage.setItem('nombre', nombre)
     let tomarDato = localStorage.getItem('nombre',nombre)
     tituloSaludo.innerText= 'Hola '+ tomarDato + ", bienvenido al simulador de sueldos."
+    
 
     let listDatos = {nombre,categoria,horas,antiguedad,adicionales,aportes}
     let objetoJson = JSON.stringify(listDatos)
     console.log(objetoJson)
 
-
-
     
+    Toastify({
+        text: "Calculo Realizado",
+        className: "info",
+        gravity: "bottom",
+        duration: -1,
+        style: {
+            
+            background: "linear-gradient(to right, #0E6251, #148F77)",
+        }
+      }).showToast();
 }

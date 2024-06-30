@@ -36,17 +36,19 @@ function miFormulario(evento){
 
     let listDatos = {nombre,categoria,horas,antiguedad,adicionales,aportes}
     let objetoJson = JSON.stringify(listDatos)
+    let objetoObjeto = JSON.parse(objetoJson)
     console.log(objetoJson)
+    console.log(objetoObjeto)
 
     
     Toastify({
         text: "Calculo Realizado",
         className: "info",
         gravity: "bottom",
-        duration: -1,
+        duration: 2000,
         style: {
             
             background: "linear-gradient(to right, #0E6251, #148F77)",
         }
-      }).showToast();
+    }).showToast();
 }

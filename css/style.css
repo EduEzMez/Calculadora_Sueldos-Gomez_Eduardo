@@ -131,7 +131,8 @@ section #resultado{
 
 .pResultado{
     color: white;
-    width: 400px;
+    width: auto;
+    font-size: 0.8em
 }
 
 .btn-borrar{

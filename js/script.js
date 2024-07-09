@@ -1,6 +1,33 @@
 
 document.addEventListener('DOMContentLoaded', mostrarDatosGuardados);
 
+const apiHora = "http://worldtimeapi.org/api/timezone/Etc/UTC";
+
+function fetchHoraActual() {
+    fetch(apiHora)
+    .then(response => response.json())
+    .then(data => {
+        const horaActual = new Date(data.datetime).toLocaleTimeString();
+        document.getElementById('hora-actual').textContent = `- ${horaActual} -`;
+    })
+    .catch(error => {
+        console.error("Error al obtener la hora:", error);
+        document.getElementById('hora-actual').textContent = "No se pudo obtener la hora.";
+    });
+}
+
+fetchHoraActual();
+
+setInterval(() => {
+    const currentHoraElement = document.getElementById('hora-actual');
+    if (currentHoraElement.textContent !== "No se pudo obtener la hora.") {
+        const currentTime = new Date();
+        currentHoraElement.textContent = `- ${currentTime.toLocaleTimeString()} -`;
+    }
+}, 1000);
+
+
+
 let simulador = document.getElementById('formulario');
 simulador.addEventListener('submit', miFormulario);
 

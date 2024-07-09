@@ -1,10 +1,10 @@
 
 document.addEventListener('DOMContentLoaded', mostrarDatosGuardados);
 
-const apiHora = "http://worldtimeapi.org/api/timezone/Etc/UTC";
+const apiUrl = "https://worldtimeapi.org/api/timezone/Etc/UTC";
 
 function fetchHoraActual() {
-    fetch(apiHora)
+    fetch(apiUrl)
     .then(response => response.json())
     .then(data => {
         const horaActual = new Date(data.datetime).toLocaleTimeString();
